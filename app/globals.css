@@ -1,0 +1,106 @@
+@import "tailwindcss";
+
+:root {
+  --bg-deep: #0c1f24;
+  --bg-mid: #14343c;
+  --bg-soft: #1c4a52;
+  --sand: #e8dfd0;
+  --ink: #0a1619;
+  --muted: #9bb4b8;
+  --accent: #e3a23a;
+  --accent-deep: #c4841f;
+  --line: rgba(232, 223, 208, 0.16);
+  --ok: #6fbf9a;
+  --danger: #e07a6a;
+  --background: var(--bg-deep);
+  --foreground: var(--sand);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-dm-sans);
+  --font-display: var(--font-fraunces);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  color: var(--sand);
+  font-family: var(--font-dm-sans), system-ui, sans-serif;
+  background:
+    radial-gradient(1200px 600px at 10% -10%, rgba(227, 162, 58, 0.18), transparent 55%),
+    radial-gradient(900px 500px at 100% 0%, rgba(111, 191, 154, 0.12), transparent 50%),
+    linear-gradient(165deg, var(--bg-deep) 0%, var(--bg-mid) 45%, #0f2a30 100%);
+  background-attachment: fixed;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.35;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.45'/%3E%3C/svg%3E");
+  mix-blend-mode: soft-light;
+  z-index: 0;
+}
+
+#root-shell {
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes rise-in {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse-line {
+  0%,
+  100% {
+    transform: scaleX(0.35);
+    opacity: 0.4;
+  }
+  50% {
+    transform: scaleX(1);
+    opacity: 1;
+  }
+}
+
+.animate-rise {
+  animation: rise-in 0.7s ease-out both;
+}
+
+.animate-rise-delay {
+  animation: rise-in 0.8s ease-out 0.12s both;
+}
+
+.accent-line {
+  height: 2px;
+  width: 7rem;
+  background: linear-gradient(90deg, var(--accent), transparent);
+  transform-origin: left;
+  animation: pulse-line 3.2s ease-in-out infinite;
+}
+
+input,
+textarea,
+select,
+button {
+  font: inherit;
+}
