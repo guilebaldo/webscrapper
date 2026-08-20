@@ -221,7 +221,7 @@ export default function Home() {
           <label className="flex min-w-[12rem] flex-1 flex-col gap-2 text-sm">
             <span className="text-[var(--muted)]">Preset de ayuda</span>
             <select
-              className="rounded-md border border-[var(--line)] bg-[rgba(12,31,36,0.65)] px-3 py-2.5 outline-none focus:border-[var(--accent)]"
+              className="rounded-md border border-[var(--line)] bg-[rgba(42,15,61,0.65)] px-3 py-2.5 outline-none focus:border-[var(--accent)]"
               defaultValue=""
               onChange={(e) => {
                 if (e.target.value) applyPreset(e.target.value);
@@ -243,7 +243,7 @@ export default function Home() {
             <select
               value={mode}
               onChange={(e) => setMode(e.target.value as ScrapeMode)}
-              className="rounded-md border border-[var(--line)] bg-[rgba(12,31,36,0.65)] px-3 py-2.5 outline-none focus:border-[var(--accent)]"
+              className="rounded-md border border-[var(--line)] bg-[rgba(42,15,61,0.65)] px-3 py-2.5 outline-none focus:border-[var(--accent)]"
             >
               <option value="html">HTML estático</option>
               <option value="js">Renderizar JavaScript</option>
@@ -261,7 +261,7 @@ export default function Home() {
             onChange={(e) => setUrlsText(e.target.value)}
             rows={3}
             placeholder="https://…"
-            className="rounded-md border border-[var(--line)] bg-[rgba(12,31,36,0.65)] px-3 py-2.5 font-mono text-[13px] outline-none focus:border-[var(--accent)]"
+            className="rounded-md border border-[var(--line)] bg-[rgba(42,15,61,0.65)] px-3 py-2.5 font-mono text-[13px] outline-none focus:border-[var(--accent)]"
           />
         </label>
 
@@ -274,7 +274,7 @@ export default function Home() {
               value={itemSelector}
               onChange={(e) => setItemSelector(e.target.value)}
               placeholder="article, .product, li.item…"
-              className="rounded-md border border-[var(--line)] bg-[rgba(12,31,36,0.65)] px-3 py-2.5 font-mono text-[13px] outline-none focus:border-[var(--accent)]"
+              className="rounded-md border border-[var(--line)] bg-[rgba(42,15,61,0.65)] px-3 py-2.5 font-mono text-[13px] outline-none focus:border-[var(--accent)]"
             />
           </label>
         ) : (
@@ -285,7 +285,7 @@ export default function Home() {
                 value={listPath}
                 onChange={(e) => setListPath(e.target.value)}
                 placeholder="refacciones"
-                className="rounded-md border border-[var(--line)] bg-[rgba(12,31,36,0.65)] px-3 py-2.5 font-mono text-[13px] outline-none focus:border-[var(--accent)]"
+                className="rounded-md border border-[var(--line)] bg-[rgba(42,15,61,0.65)] px-3 py-2.5 font-mono text-[13px] outline-none focus:border-[var(--accent)]"
               />
             </label>
             <label className="flex flex-col gap-2 text-sm">
@@ -293,7 +293,7 @@ export default function Home() {
               <select
                 value={method}
                 onChange={(e) => setMethod(e.target.value as "GET" | "POST")}
-                className="rounded-md border border-[var(--line)] bg-[rgba(12,31,36,0.65)] px-3 py-2.5 outline-none focus:border-[var(--accent)]"
+                className="rounded-md border border-[var(--line)] bg-[rgba(42,15,61,0.65)] px-3 py-2.5 outline-none focus:border-[var(--accent)]"
               >
                 <option value="GET">GET</option>
                 <option value="POST">POST</option>
@@ -306,7 +306,7 @@ export default function Home() {
                 onChange={(e) =>
                   setContentType(e.target.value as "form" | "json" | "none")
                 }
-                className="rounded-md border border-[var(--line)] bg-[rgba(12,31,36,0.65)] px-3 py-2.5 outline-none focus:border-[var(--accent)]"
+                className="rounded-md border border-[var(--line)] bg-[rgba(42,15,61,0.65)] px-3 py-2.5 outline-none focus:border-[var(--accent)]"
               >
                 <option value="none">Sin cuerpo</option>
                 <option value="form">FormData (clave=valor)</option>
@@ -319,7 +319,7 @@ export default function Home() {
                 value={imageBaseUrl}
                 onChange={(e) => setImageBaseUrl(e.target.value)}
                 placeholder="https://cdn.example.com/"
-                className="rounded-md border border-[var(--line)] bg-[rgba(12,31,36,0.65)] px-3 py-2.5 font-mono text-[13px] outline-none focus:border-[var(--accent)]"
+                className="rounded-md border border-[var(--line)] bg-[rgba(42,15,61,0.65)] px-3 py-2.5 font-mono text-[13px] outline-none focus:border-[var(--accent)]"
               />
             </label>
             {contentType === "form" && (
@@ -331,7 +331,7 @@ export default function Home() {
                   value={formFieldsText}
                   onChange={(e) => setFormFieldsText(e.target.value)}
                   rows={3}
-                  className="rounded-md border border-[var(--line)] bg-[rgba(12,31,36,0.65)] px-3 py-2.5 font-mono text-[13px] outline-none focus:border-[var(--accent)]"
+                  className="rounded-md border border-[var(--line)] bg-[rgba(42,15,61,0.65)] px-3 py-2.5 font-mono text-[13px] outline-none focus:border-[var(--accent)]"
                 />
               </label>
             )}
@@ -342,7 +342,7 @@ export default function Home() {
                   value={jsonBodyText}
                   onChange={(e) => setJsonBodyText(e.target.value)}
                   rows={4}
-                  className="rounded-md border border-[var(--line)] bg-[rgba(12,31,36,0.65)] px-3 py-2.5 font-mono text-[13px] outline-none focus:border-[var(--accent)]"
+                  className="rounded-md border border-[var(--line)] bg-[rgba(42,15,61,0.65)] px-3 py-2.5 font-mono text-[13px] outline-none focus:border-[var(--accent)]"
                 />
               </label>
             )}
@@ -374,13 +374,13 @@ export default function Home() {
                   value={field.label}
                   onChange={(e) => updateField(i, { label: e.target.value })}
                   placeholder="nombre"
-                  className="rounded-md border border-[var(--line)] bg-[rgba(12,31,36,0.65)] px-3 py-2 text-sm outline-none focus:border-[var(--accent)]"
+                  className="rounded-md border border-[var(--line)] bg-[rgba(42,15,61,0.65)] px-3 py-2 text-sm outline-none focus:border-[var(--accent)]"
                 />
                 <input
                   value={field.path}
                   onChange={(e) => updateField(i, { path: e.target.value })}
                   placeholder={mode === "json" ? "re_precio" : "h2, .title"}
-                  className="rounded-md border border-[var(--line)] bg-[rgba(12,31,36,0.65)] px-3 py-2 font-mono text-[13px] outline-none focus:border-[var(--accent)]"
+                  className="rounded-md border border-[var(--line)] bg-[rgba(42,15,61,0.65)] px-3 py-2 font-mono text-[13px] outline-none focus:border-[var(--accent)]"
                 />
                 <button
                   type="button"
@@ -406,7 +406,7 @@ export default function Home() {
               value={imageSelector}
               onChange={(e) => setImageSelector(e.target.value)}
               placeholder={mode === "json" ? "re_path_img" : "img@src"}
-              className="rounded-md border border-[var(--line)] bg-[rgba(12,31,36,0.65)] px-3 py-2.5 font-mono text-[13px] outline-none focus:border-[var(--accent)]"
+              className="rounded-md border border-[var(--line)] bg-[rgba(42,15,61,0.65)] px-3 py-2.5 font-mono text-[13px] outline-none focus:border-[var(--accent)]"
             />
           </label>
           {mode !== "json" && (
@@ -416,7 +416,7 @@ export default function Home() {
                 value={imageBaseUrl}
                 onChange={(e) => setImageBaseUrl(e.target.value)}
                 placeholder="https://…"
-                className="rounded-md border border-[var(--line)] bg-[rgba(12,31,36,0.65)] px-3 py-2.5 font-mono text-[13px] outline-none focus:border-[var(--accent)]"
+                className="rounded-md border border-[var(--line)] bg-[rgba(42,15,61,0.65)] px-3 py-2.5 font-mono text-[13px] outline-none focus:border-[var(--accent)]"
               />
             </label>
           )}
@@ -493,7 +493,7 @@ export default function Home() {
 
           <div className="overflow-x-auto rounded-md border border-[var(--line)]">
             <table className="min-w-full border-collapse text-left text-sm">
-              <thead className="bg-[rgba(20,52,60,0.9)]">
+              <thead className="bg-[rgba(61,26,92,0.9)]">
                 <tr>
                   <th className="px-3 py-2.5 font-medium text-[var(--muted)]">#</th>
                   {columns.map((c) => (
@@ -514,7 +514,7 @@ export default function Home() {
                 {rows.map((row, i) => (
                   <tr
                     key={`${row.sourceUrl}-${i}`}
-                    className="border-t border-[var(--line)] odd:bg-[rgba(12,31,36,0.35)]"
+                    className="border-t border-[var(--line)] odd:bg-[rgba(42,15,61,0.35)]"
                   >
                     <td className="px-3 py-2 align-top text-[var(--muted)]">
                       {i + 1}
